@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bokeh Plot</title>
+    <style>
+      html, body {
+        box-sizing: border-box;
+        display: flow-root;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.3.4.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+  </head>
+  <body>
+    <div id="ad301ac6-bfdd-43e4-988e-39d25cef2e93" data-root-id="p1450" style="display: contents;"></div>
+  
+    <script type="application/json" id="p1561">
+      {"13b08add-7bca-4b43-9df9-6742a5c000f9":{"version":"3.3.4","title":"Bokeh Application","roots":[{"type":"object","name":"Figure","id":"p1450","attributes":{"height":400,"x_range":{"type":"object","name":"FactorRange","id":"p1460","attributes":{"factors":["Australia","Canada","Central","France","Germany","Northeast","Northwest","Southeast","Southwest","United Kingdom"]}},"y_range":{"type":"object","name":"DataRange1d","id":"p1452","attributes":{"start":0}},"x_scale":{"type":"object","name":"CategoricalScale","id":"p1461"},"y_scale":{"type":"object","name":"LinearScale","id":"p1462"},"title":{"type":"object","name":"Title","id":"p1453","attributes":{"text":"Sales Amount by Region"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1480","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1447","attributes":{"selected":{"type":"object","name":"Selection","id":"p1448","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1449"},"data":{"type":"map","entries":[["regions",["Australia","Canada","Central","France","Germany","Northeast","Northwest","Southeast","Southwest","United Kingdom"]],["sales",{"type":"ndarray","array":{"type":"bytes","data":"pHA98sxSZEEzMzNTNzJvQaRwPTqkK15BpHA96pipW0FxPQoH95tSQY/C9ai7eFpBAAAA2PmtbkFmZmam+Q5eQUjheiByEHdBhetRSPBCXUE="},"shape":[10],"dtype":"float64","order":"little"}]]}}},"view":{"type":"object","name":"CDSView","id":"p1481","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1482"}}},"glyph":{"type":"object","name":"VBar","id":"p1477","attributes":{"x":{"type":"field","field":"regions"},"width":{"type":"value","value":0.9},"top":{"type":"field","field":"sales"},"line_color":{"type":"value","value":"white"},"fill_color":{"type":"field","field":"regions","transform":{"type":"object","name":"CategoricalColorMapper","id":"p1473","attributes":{"palette":["#5e4fa2","#3288bd","#66c2a5","#abdda4","#e6f598","#ffffbf","#fee08b","#fdae61","#f46d43","#d53e4f","#9e0142"],"factors":["Australia","Canada","Central","France","Germany","Northeast","Northwest","Southeast","Southwest","United Kingdom"]}}}}},"nonselection_glyph":{"type":"object","name":"VBar","id":"p1478","attributes":{"x":{"type":"field","field":"regions"},"width":{"type":"value","value":0.9},"top":{"type":"field","field":"sales"},"line_color":{"type":"value","value":"white"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"field","field":"regions","transform":{"id":"p1473"}},"fill_alpha":{"type":"value","value":0.1},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"VBar","id":"p1479","attributes":{"x":{"type":"field","field":"regions"},"width":{"type":"value","value":0.9},"top":{"type":"field","field":"sales"},"line_color":{"type":"value","value":"white"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"field","field":"regions","transform":{"id":"p1473"}},"fill_alpha":{"type":"value","value":0.2},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1459"},"toolbar_location":null,"left":[{"type":"object","name":"LinearAxis","id":"p1468","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1469","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1470","attributes":{"use_scientific":false}},"axis_label":"Sales Amount","major_label_policy":{"type":"object","name":"AllLabels","id":"p1471"}}}],"below":[{"type":"object","name":"CategoricalAxis","id":"p1463","attributes":{"ticker":{"type":"object","name":"CategoricalTicker","id":"p1464"},"formatter":{"type":"object","name":"CategoricalTickFormatter","id":"p1465"},"axis_label":"Region","major_label_policy":{"type":"object","name":"AllLabels","id":"p1466"}}}],"center":[{"type":"object","name":"Grid","id":"p1467","attributes":{"axis":{"id":"p1463"},"grid_line_color":null}},{"type":"object","name":"Grid","id":"p1472","attributes":{"dimension":1,"axis":{"id":"p1468"}}}]}}]}}
+    </script>
+    <script type="text/javascript">
+      (function() {
+        const fn = function() {
+          Bokeh.safely(function() {
+            (function(root) {
+              function embed_document(root) {
+              const docs_json = document.getElementById('p1561').textContent;
+              const render_items = [{"docid":"13b08add-7bca-4b43-9df9-6742a5c000f9","roots":{"p1450":"ad301ac6-bfdd-43e4-988e-39d25cef2e93"},"root_ids":["p1450"]}];
+              root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                let attempts = 0;
+                const timer = setInterval(function(root) {
+                  if (root.Bokeh !== undefined) {
+                    clearInterval(timer);
+                    embed_document(root);
+                  } else {
+                    attempts++;
+                    if (attempts > 100) {
+                      clearInterval(timer);
+                      console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                    }
+                  }
+                }, 10, root)
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+  </body>
+</html>
